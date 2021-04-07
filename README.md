@@ -8,6 +8,15 @@ Retrieve logs from AWS Cloudwatch
 $ go build  -o cloudlogs cmd/main/main.go
 ```
 
+## How to install
+
+```
+MacOSX
+$ curl -s -L https://github.com/bangnh1/cloudlogs/releases/download/v0.0.1/cloudlogs-darwin-amd64 -o cloudlogs
+$ chmod +x cloudlogs
+$ mv cloudlogs /usr/local/bin/cloudlogs
+```
+
 ## How to use:
 
 - Provide credentials
@@ -92,8 +101,8 @@ $ ./cloudlogs get --group <<GROUP_NAME>> --start "1day ago" --filter "404"
 
 - Batch mode - write to file in concurrent
 
-* start (end) is the total time to get logs
-* interval is the desired amount of time per file
+  - `start (end) is the total time to get logs`
+  - `interval is the desired amount of time per file`
 
 Example: Retrieved logs a weeks ago and interval is a day.
 
