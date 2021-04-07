@@ -4,17 +4,19 @@ import (
 	"bufio"
 	"fmt"
 	"github.com/aws/aws-sdk-go/service/cloudwatchlogs"
-	"github.com/bangnh1/cloudlogs/pkg/common"
 	"os"
 	"strconv"
 )
 
+/**
+ * @todo FORMAT MESSAGE
+ */
 func formatMessage(event *cloudwatchlogs.FilteredLogEvent) string {
-	timeStamp := *event.Timestamp
+	// timeStamp := *event.Timestamp
 	message := *event.Message
 
-	timeStampString := common.TimeInt64ToString(timeStamp)
-	formatedMessage := timeStampString + " " + message + "\n"
+	// timeStampString := common.TimeInt64ToString(timeStamp)
+	formatedMessage := message + "\n"
 
 	return formatedMessage
 }
