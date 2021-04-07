@@ -4,7 +4,6 @@ import (
 	"bufio"
 	"fmt"
 	"github.com/aws/aws-sdk-go/service/cloudwatchlogs"
-	// "github.com/bangnh1/cloudlogs/pkg/common"
 	"os"
 	"strconv"
 )
