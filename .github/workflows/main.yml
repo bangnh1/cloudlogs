@@ -16,3 +16,7 @@ jobs:
       uses: actions/checkout@v2
     - name: Test
       run: go test ./test
+    - name: Run script file
+      run: |
+         echo "Done!"
+      shell: bash
